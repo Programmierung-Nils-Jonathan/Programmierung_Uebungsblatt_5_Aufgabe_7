@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Aufgabe 7
+    init: javac HTree.java
+    command: java HTree
+  - name: Javadoc
+    command: javadoc -d doc HTree.java
+  - name: Javadoc Server
+    command: |
+      cd doc
+      python3 -m http.server 3000
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
