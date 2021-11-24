@@ -3,7 +3,7 @@ public class HTree {
 	
 	public static void main(String[] args) {
 		HTree t=new HTree();
-		t.drawHTree(600,5);
+		t.drawHTree(600,2);
 	}
 	
 	public HTree(){
@@ -18,7 +18,39 @@ public class HTree {
 	muss sichergestellt sein,
 	dass die Canvas Zeichenrichtung nach unten gerichtet ist. */ 
 	public void drawHTree(int size, int n) {
-		//TODO
+		if(n > 0) {
+			c.push();
+
+			c.rotate(90);
+
+			c.moveForward(size/2);
+
+			c.rotate(90);
+
+			//c.moveForward(size/2);
+
+			c.drawForward(size);
+
+			c.rotate(180);
+
+			c.moveForward(size/2);
+
+			c.rotate(-90);
+
+			c.drawForward(size);
+
+			c.rotate(-90);
+
+			c.moveForward(size/2);
+
+			c.rotate(180);
+
+			c.drawForward(size);
+
+			c.rotate(180);
+
+			this.drawHTree(size/2, n - 1);
+		}
 	}
 	
 	
