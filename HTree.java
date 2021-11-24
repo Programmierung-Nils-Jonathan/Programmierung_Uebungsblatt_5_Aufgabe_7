@@ -1,5 +1,4 @@
 public class HTree {
-	public class HTree {
 	private Canvas c;
 	
 	public static void main(String[] args) {
