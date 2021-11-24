@@ -25,9 +25,13 @@ public class HTree {
 
 			c.moveForward(size/2);
 
-			c.rotate(90);
+			c.rotate(-90);
 
-			//c.moveForward(size/2);
+			c.moveForward(size/2);
+
+			c.rotate(180);
+
+			//this.drawHTree(size/2, n - 1);
 
 			c.drawForward(size);
 
@@ -47,7 +51,6 @@ public class HTree {
 
 			c.drawForward(size);
 
-			c.rotate(180);
 
 			this.drawHTree(size/2, n - 1);
 		}
